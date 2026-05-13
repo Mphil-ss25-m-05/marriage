@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Will You Marry Me 💍</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 80px;
+            background-color: #fff0f5;
+        }
+
+        h1 {
+            color: #d63384;
+        }
+
+        button {
+            padding: 12px 22px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+        }
+
+        #yesBtn {
+            background-color: #28a745;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #dc3545;
+            color: white;
+            position: relative;
+        }
+
+        #musicBtn {
+            background-color: #6f42c1;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>💍 Will You Marry Me?</h1>
+
+    <h2 id="message">Please choose 😊</h2>
+
+    <!-- Romantic Music -->
+    <audio id="music" loop>
+        <source src="romantic.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicBtn" onclick="startMusic()">🎵 Start Music</button>
+
+    <br><br>
+
+    <button id="yesBtn" onclick="sayYes()">Yes ❤️</button>
+
+    <button id="noBtn" onmouseover="moveNo()">No 💔</button>
+
+    <script>
+
+        function startMusic() {
+            document.getElementById("music").play();
+        }
+
+        function sayYes() {
+            document.getElementById("message").innerHTML =
+                "❤️ How can you say no my Queen 💍✨ I’m your childhood crush";
+        }
+
+        function moveNo() {
+
+            let btn = document.getElementById("noBtn");
+
+            let x = Math.random() * 250;
+            let y = Math.random() * 150;
+
+            btn.style.position = "relative";
+            btn.style.left = x + "px";
+            btn.style.top = y + "px";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
